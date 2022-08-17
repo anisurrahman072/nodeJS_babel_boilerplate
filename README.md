@@ -2,10 +2,10 @@
 
 > A minimal Node-Babel boilerplate
 
-## Setup 
+## Setup
 
 ```
-git clone https://github.com/agmm/minimal-node-babel-boilerplate.git && cd minimal-node-babel-boilerplate && npm install
+git clone https://github.com/anisurrahman072/nodeJS_babel_boilerplate.git && cd minimal-node-babel-boilerplate && npm install
 ```
 
 ## Commands
