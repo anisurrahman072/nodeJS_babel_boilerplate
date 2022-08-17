@@ -9,7 +9,6 @@ let variationString = "export const fields = [";
 
 // First files
 const filesFirst = fs.readdirSync(dirFirst);
-console.log("----->>>>", filesFirst);
 
 if (filesFirst.length > 0) {
   variationString = variationString + "{variation: [";
@@ -17,7 +16,6 @@ if (filesFirst.length > 0) {
 
 let index = 0;
 for (const file of filesFirst) {
-  console.log("......>>>>>: ", index);
   if (index != 0) {
     variationString = variationString + ",";
   }
@@ -57,7 +55,6 @@ if (filesSecond.length > 0) {
 
 variationString = variationString + "]";
 
-console.log(variationString);
 fs.writeFileSync(path.join(__dirname, "output2.txt"), variationString);
 
 // /Users/anis/projects/minimal-node-babel-boilerplate/src
