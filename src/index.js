@@ -3,8 +3,7 @@ import path from "path";
 
 const dirFirst = path.join(__dirname, "images/first");
 const dirSecond = path.join(__dirname, "images/second");
-let firstFilesDirectories = [];
-let secondFilesDirectories = [];
+
 let variationString = "export const fields = [";
 
 // First files
