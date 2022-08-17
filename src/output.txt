@@ -1,0 +1,838 @@
+export const fields = [
+	{
+		variation: [
+			{
+				name: 'crown_darkblue', 
+				 icon:  require('../assets/field_icons/crown/crown_darkblue.png')
+			},
+			{
+				name: 'crown_deeppink', 
+				 icon:  require('../assets/field_icons/crown/crown_deeppink.png')
+			},
+			{
+				name: 'crown_mediumpurple', 
+				 icon:  require('../assets/field_icons/crown/crown_mediumpurple.png')
+			},
+			{
+				name: 'crown_deepskyblue', 
+				 icon:  require('../assets/field_icons/crown/crown_deepskyblue.png')
+			},
+			{
+				name: 'crown_forestgreen', 
+				 icon:  require('../assets/field_icons/crown/crown_forestgreen.png')
+			},
+			{
+				name: 'crown_frenchblue', 
+				 icon:  require('../assets/field_icons/crown/crown_frenchblue.png')
+			},
+			{
+				name: 'crown_gold', 
+				 icon:  require('../assets/field_icons/crown/crown_gold.png')
+			},
+			{
+				name: 'crown_grey', 
+				 icon:  require('../assets/field_icons/crown/crown_grey.png')
+			},
+			{
+				name: 'crown_paleturquoise', 
+				 icon:  require('../assets/field_icons/crown/crown_paleturquoise.png')
+			},
+			{
+				name: 'crown_yellow', 
+				 icon:  require('../assets/field_icons/crown/crown_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'cake_field_darkblue', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_darkblue.png')
+			},
+			{
+				name: 'cake_field_deeppink', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_deeppink.png')
+			},
+			{
+				name: 'cake_field_mediumpurple', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_mediumpurple.png')
+			},
+			{
+				name: 'cake_field_deepskyblue', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_deepskyblue.png')
+			},
+			{
+				name: 'cake_field_forestgreen', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_forestgreen.png')
+			},
+			{
+				name: 'cake_field_frenchblue', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_frenchblue.png')
+			},
+			{
+				name: 'cake_field_gold', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_gold.png')
+			},
+			{
+				name: 'cake_field_grey', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_grey.png')
+			},
+			{
+				name: 'cake_field_paleturquoise', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_paleturquoise.png')
+			},
+			{
+				name: 'cake_field_yellow', 
+				 icon:  require('../assets/field_icons/cake_field/cake_field_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'center_field_darkblue', 
+				 icon:  require('../assets/field_icons/center_field/center_field_darkblue.png')
+			},
+			{
+				name: 'center_field_deeppink', 
+				 icon:  require('../assets/field_icons/center_field/center_field_deeppink.png')
+			},
+			{
+				name: 'center_field_mediumpurple', 
+				 icon:  require('../assets/field_icons/center_field/center_field_mediumpurple.png')
+			},
+			{
+				name: 'center_field_deepskyblue', 
+				 icon:  require('../assets/field_icons/center_field/center_field_deepskyblue.png')
+			},
+			{
+				name: 'center_field_forestgreen', 
+				 icon:  require('../assets/field_icons/center_field/center_field_forestgreen.png')
+			},
+			{
+				name: 'center_field_frenchblue', 
+				 icon:  require('../assets/field_icons/center_field/center_field_frenchblue.png')
+			},
+			{
+				name: 'center_field_gold', 
+				 icon:  require('../assets/field_icons/center_field/center_field_gold.png')
+			},
+			{
+				name: 'center_field_grey', 
+				 icon:  require('../assets/field_icons/center_field/center_field_grey.png')
+			},
+			{
+				name: 'center_field_paleturquoise', 
+				 icon:  require('../assets/field_icons/center_field/center_field_paleturquoise.png')
+			},
+			{
+				name: 'center_field_yellow', 
+				 icon:  require('../assets/field_icons/center_field/center_field_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'closely_field_darkblue', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_darkblue.png')
+			},
+			{
+				name: 'closely_field_deeppink', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_deeppink.png')
+			},
+			{
+				name: 'closely_field_mediumpurple', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_mediumpurple.png')
+			},
+			{
+				name: 'closely_field_deepskyblue', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_deepskyblue.png')
+			},
+			{
+				name: 'closely_field_forestgreen', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_forestgreen.png')
+			},
+			{
+				name: 'closely_field_frenchblue', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_frenchblue.png')
+			},
+			{
+				name: 'closely_field_gold', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_gold.png')
+			},
+			{
+				name: 'closely_field_grey', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_grey.png')
+			},
+			{
+				name: 'closely_field_paleturquoise', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_paleturquoise.png')
+			},
+			{
+				name: 'closely_field_yellow', 
+				 icon:  require('../assets/field_icons/closely_field/closely_field_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'diamond_darkblue', 
+				 icon:  require('../assets/field_icons/diamond/diamond_darkblue.png')
+			},
+			{
+				name: 'diamond_deeppink', 
+				 icon:  require('../assets/field_icons/diamond/diamond_deeppink.png')
+			},
+			{
+				name: 'diamond_mediumpurple', 
+				 icon:  require('../assets/field_icons/diamond/diamond_mediumpurple.png')
+			},
+			{
+				name: 'diamond_deepskyblue', 
+				 icon:  require('../assets/field_icons/diamond/diamond_deepskyblue.png')
+			},
+			{
+				name: 'diamond_forestgreen', 
+				 icon:  require('../assets/field_icons/diamond/diamond_forestgreen.png')
+			},
+			{
+				name: 'diamond_frenchblue', 
+				 icon:  require('../assets/field_icons/diamond/diamond_frenchblue.png')
+			},
+			{
+				name: 'diamond_gold', 
+				 icon:  require('../assets/field_icons/diamond/diamond_gold.png')
+			},
+			{
+				name: 'diamond_grey', 
+				 icon:  require('../assets/field_icons/diamond/diamond_grey.png')
+			},
+			{
+				name: 'diamond_turquoise', 
+				 icon:  require('../assets/field_icons/diamond/diamond_turquoise.png')
+			},
+			{
+				name: 'diamond_yellow', 
+				 icon:  require('../assets/field_icons/diamond/diamond_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'dome_darkblue', 
+				 icon:  require('../assets/field_icons/dome/dome_darkblue.png')
+			},
+			{
+				name: 'dome_deeppink', 
+				 icon:  require('../assets/field_icons/dome/dome_deeppink.png')
+			},
+			{
+				name: 'dome_mediumpurple', 
+				 icon:  require('../assets/field_icons/dome/dome_mediumpurple.png')
+			},
+			{
+				name: 'dome_deepskyblue', 
+				 icon:  require('../assets/field_icons/dome/dome_deepskyblue.png')
+			},
+			{
+				name: 'dome_forestgreen', 
+				 icon:  require('../assets/field_icons/dome/dome_forestgreen.png')
+			},
+			{
+				name: 'dome_frenchblue', 
+				 icon:  require('../assets/field_icons/dome/dome_frenchblue.png')
+			},
+			{
+				name: 'dome_gold', 
+				 icon:  require('../assets/field_icons/dome/dome_gold.png')
+			},
+			{
+				name: 'dome_grey', 
+				 icon:  require('../assets/field_icons/dome/dome_grey.png')
+			},
+			{
+				name: 'dome_paleturquoise', 
+				 icon:  require('../assets/field_icons/dome/dome_paleturquoise.png')
+			},
+			{
+				name: 'dome_yellow', 
+				 icon:  require('../assets/field_icons/dome/dome_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'dome_light_darkblue', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_darkblue.png')
+			},
+			{
+				name: 'dome_light_deeppink', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_deeppink.png')
+			},
+			{
+				name: 'dome_light_mediumpurple', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_mediumpurple.png')
+			},
+			{
+				name: 'dome_light_deepskyblue', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_deepskyblue.png')
+			},
+			{
+				name: 'dome_light_forestgreen', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_forestgreen.png')
+			},
+			{
+				name: 'dome_light_frenchblue', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_frenchblue.png')
+			},
+			{
+				name: 'dome_light_gold', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_gold.png')
+			},
+			{
+				name: 'dome_light_grey', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_grey.png')
+			},
+			{
+				name: 'dome_light_paleturquoise', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_paleturquoise.png')
+			},
+			{
+				name: 'dome_light_yellow', 
+				 icon:  require('../assets/field_icons/dome_light/dome_light_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'floodlights_darkblue', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_darkblue.png')
+			},
+			{
+				name: 'floodlights_deeppink', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_deeppink.png')
+			},
+			{
+				name: 'floodlights_mediumpurple', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_mediumpurple.png')
+			},
+			{
+				name: 'floodlights_deepskyblue', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_deepskyblue.png')
+			},
+			{
+				name: 'floodlights_forestgreen', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_forestgreen.png')
+			},
+			{
+				name: 'floodlights_frenchblue', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_frenchblue.png')
+			},
+			{
+				name: 'floodlights_gold', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_gold.png')
+			},
+			{
+				name: 'floodlights_grey', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_grey.png')
+			},
+			{
+				name: 'floodlights_paleturquoise', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_paleturquoise.png')
+			},
+			{
+				name: 'floodlights_yellow', 
+				 icon:  require('../assets/field_icons/floodlights/floodlights_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'flower_darkblue', 
+				 icon:  require('../assets/field_icons/flower/flower_darkblue.png')
+			},
+			{
+				name: 'flower_deeppink', 
+				 icon:  require('../assets/field_icons/flower/flower_deeppink.png')
+			},
+			{
+				name: 'flower_mediumpurple', 
+				 icon:  require('../assets/field_icons/flower/flower_mediumpurple.png')
+			},
+			{
+				name: 'flower_deepskyblue', 
+				 icon:  require('../assets/field_icons/flower/flower_deepskyblue.png')
+			},
+			{
+				name: 'flower_forestgreen', 
+				 icon:  require('../assets/field_icons/flower/flower_forestgreen.png')
+			},
+			{
+				name: 'flower_frenchblue', 
+				 icon:  require('../assets/field_icons/flower/flower_frenchblue.png')
+			},
+			{
+				name: 'flower_gold', 
+				 icon:  require('../assets/field_icons/flower/flower_gold.png')
+			},
+			{
+				name: 'flower_grey', 
+				 icon:  require('../assets/field_icons/flower/flower_grey.png')
+			},
+			{
+				name: 'flower_turquoise', 
+				 icon:  require('../assets/field_icons/flower/flower_turquoise.png')
+			},
+			{
+				name: 'flower_yellow', 
+				 icon:  require('../assets/field_icons/flower/flower_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'hard_rock_darkblue', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_darkblue.png')
+			},
+			{
+				name: 'hard_rock_deeppink', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_deeppink.png')
+			},
+			{
+				name: 'hard_rock_mediumpurple', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_mediumpurple.png')
+			},
+			{
+				name: 'hard_rock_deepskyblue', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_deepskyblue.png')
+			},
+			{
+				name: 'hard_rock_forestgreen', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_forestgreen.png')
+			},
+			{
+				name: 'hard_rock_frenchblue', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_frenchblue.png')
+			},
+			{
+				name: 'hard_rock_gold', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_gold.png')
+			},
+			{
+				name: 'hard_rock_grey', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_grey.png')
+			},
+			{
+				name: 'hard_rock_paleturquoise', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_paleturquoise.png')
+			},
+			{
+				name: 'hard_rock_yellow', 
+				 icon:  require('../assets/field_icons/hard_rock/hard_rock_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'king_crown_darkblue', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_darkblue.png')
+			},
+			{
+				name: 'king_crown_deeppink', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_deeppink.png')
+			},
+			{
+				name: 'king_crown_mediumpurple', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_mediumpurple.png')
+			},
+			{
+				name: 'king_crown_deepskyblue', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_deepskyblue.png')
+			},
+			{
+				name: 'king_crown_forestgreen', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_forestgreen.png')
+			},
+			{
+				name: 'king_crown_frenchblue', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_frenchblue.png')
+			},
+			{
+				name: 'king_crown_gold', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_gold.png')
+			},
+			{
+				name: 'king_crown_grey', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_grey.png')
+			},
+			{
+				name: 'king_crown_paleturquoise', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_paleturquoise.png')
+			},
+			{
+				name: 'king_crown_yellow', 
+				 icon:  require('../assets/field_icons/king_crown/king_crown_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'light_diamond_darkblue', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_darkblue.png')
+			},
+			{
+				name: 'light_diamond_deeppink', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_deeppink.png')
+			},
+			{
+				name: 'light_diamond_mediumpurple', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_mediumpurple.png')
+			},
+			{
+				name: 'light_diamond_deepskyblue', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_deepskyblue.png')
+			},
+			{
+				name: 'light_diamond_forestgreen', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_forestgreen.png')
+			},
+			{
+				name: 'light_diamond_frenchblue', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_frenchblue.png')
+			},
+			{
+				name: 'light_diamond_gold', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_gold.png')
+			},
+			{
+				name: 'light_diamond_grey', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_grey.png')
+			},
+			{
+				name: 'light_diamond_paleturquoise', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_paleturquoise.png')
+			},
+			{
+				name: 'light_diamond_yellow', 
+				 icon:  require('../assets/field_icons/light_diamond/light_diamond_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'open_center_darkblue', 
+				 icon:  require('../assets/field_icons/open_center/open_center_darkblue.png')
+			},
+			{
+				name: 'open_center_deeppink', 
+				 icon:  require('../assets/field_icons/open_center/open_center_deeppink.png')
+			},
+			{
+				name: 'open_center_mediumpurple', 
+				 icon:  require('../assets/field_icons/open_center/open_center_mediumpurple.png')
+			},
+			{
+				name: 'open_center_deepskyblue', 
+				 icon:  require('../assets/field_icons/open_center/open_center_deepskyblue.png')
+			},
+			{
+				name: 'open_center_forestgreen', 
+				 icon:  require('../assets/field_icons/open_center/open_center_forestgreen.png')
+			},
+			{
+				name: 'open_center_frenchblue', 
+				 icon:  require('../assets/field_icons/open_center/open_center_frenchblue.png')
+			},
+			{
+				name: 'open_center_gold', 
+				 icon:  require('../assets/field_icons/open_center/open_center_gold.png')
+			},
+			{
+				name: 'open_center_grey', 
+				 icon:  require('../assets/field_icons/open_center/open_center_grey.png')
+			},
+			{
+				name: 'open_center_paleturquoise', 
+				 icon:  require('../assets/field_icons/open_center/open_center_paleturquoise.png')
+			},
+			{
+				name: 'open_center_yellow', 
+				 icon:  require('../assets/field_icons/open_center/open_center_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'open_oval_darkblue', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_darkblue.png')
+			},
+			{
+				name: 'open_oval_deeppink', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_deeppink.png')
+			},
+			{
+				name: 'open_oval_mediumpurple', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_mediumpurple.png')
+			},
+			{
+				name: 'open_oval_deepskyblue', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_deepskyblue.png')
+			},
+			{
+				name: 'open_oval_forestgreen', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_forestgreen.png')
+			},
+			{
+				name: 'open_oval_frenchblue', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_frenchblue.png')
+			},
+			{
+				name: 'open_oval_gold', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_gold.png')
+			},
+			{
+				name: 'open_oval_grey', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_grey.png')
+			},
+			{
+				name: 'open_oval_paleturquoise', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_paleturquoise.png')
+			},
+			{
+				name: 'open_oval_yellow', 
+				 icon:  require('../assets/field_icons/open_oval/open_oval_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'rock_darkblue', 
+				 icon:  require('../assets/field_icons/rock/rock_darkblue.png')
+			},
+			{
+				name: 'rock_deeppink', 
+				 icon:  require('../assets/field_icons/rock/rock_deeppink.png')
+			},
+			{
+				name: 'rock_mediumpurple', 
+				 icon:  require('../assets/field_icons/rock/rock_mediumpurple.png')
+			},
+			{
+				name: 'rock_deepskyblue', 
+				 icon:  require('../assets/field_icons/rock/rock_deepskyblue.png')
+			},
+			{
+				name: 'rock_forestgreen', 
+				 icon:  require('../assets/field_icons/rock/rock_forestgreen.png')
+			},
+			{
+				name: 'rock_frenchblue', 
+				 icon:  require('../assets/field_icons/rock/rock_frenchblue.png')
+			},
+			{
+				name: 'rock_gold', 
+				 icon:  require('../assets/field_icons/rock/rock_gold.png')
+			},
+			{
+				name: 'rock_grey', 
+				 icon:  require('../assets/field_icons/rock/rock_grey.png')
+			},
+			{
+				name: 'rock_paleturquoise', 
+				 icon:  require('../assets/field_icons/rock/rock_paleturquoise.png')
+			},
+			{
+				name: 'rock_yellow', 
+				 icon:  require('../assets/field_icons/rock/rock_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'rock_open_darkblue', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_darkblue.png')
+			},
+			{
+				name: 'rock_open_deeppink', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_deeppink.png')
+			},
+			{
+				name: 'rock_open_mediumpurple', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_mediumpurple.png')
+			},
+			{
+				name: 'rock_open_deepskyblue', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_deepskyblue.png')
+			},
+			{
+				name: 'rock_open_forestgreen', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_forestgreen.png')
+			},
+			{
+				name: 'rock_open_frenchblue', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_frenchblue.png')
+			},
+			{
+				name: 'rock_open_gold', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_gold.png')
+			},
+			{
+				name: 'rock_open_grey', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_grey.png')
+			},
+			{
+				name: 'rock_open_paleturquoise', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_paleturquoise.png')
+			},
+			{
+				name: 'rock_open_yellow', 
+				 icon:  require('../assets/field_icons/rock_open/rock_open_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'roof_open_darkblue', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_darkblue.png')
+			},
+			{
+				name: 'roof_open_deeppink', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_deeppink.png')
+			},
+			{
+				name: 'roof_open_mediumpurple', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_mediumpurple.png')
+			},
+			{
+				name: 'roof_open_deepskyblue', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_deepskyblue.png')
+			},
+			{
+				name: 'roof_open_forestgreen', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_forestgreen.png')
+			},
+			{
+				name: 'roof_open_frenchblue', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_frenchblue.png')
+			},
+			{
+				name: 'roof_open_gold', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_gold.png')
+			},
+			{
+				name: 'roof_open_grey', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_grey.png')
+			},
+			{
+				name: 'roof_open_paleturquoise', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_paleturquoise.png')
+			},
+			{
+				name: 'roof_open_yellow', 
+				 icon:  require('../assets/field_icons/roof_open/roof_open_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'superdome_darkblue', 
+				 icon:  require('../assets/field_icons/superdome/superdome_darkblue.png')
+			},
+			{
+				name: 'superdome_deeppink', 
+				 icon:  require('../assets/field_icons/superdome/superdome_deeppink.png')
+			},
+			{
+				name: 'superdome_mediumpurple', 
+				 icon:  require('../assets/field_icons/superdome/superdome_mediumpurple.png')
+			},
+			{
+				name: 'superdome_deepskyblue', 
+				 icon:  require('../assets/field_icons/superdome/superdome_deepskyblue.png')
+			},
+			{
+				name: 'superdome_forestgreen', 
+				 icon:  require('../assets/field_icons/superdome/superdome_forestgreen.png')
+			},
+			{
+				name: 'superdome_frenchblue', 
+				 icon:  require('../assets/field_icons/superdome/superdome_frenchblue.png')
+			},
+			{
+				name: 'superdome_gold', 
+				 icon:  require('../assets/field_icons/superdome/superdome_gold.png')
+			},
+			{
+				name: 'superdome_grey', 
+				 icon:  require('../assets/field_icons/superdome/superdome_grey.png')
+			},
+			{
+				name: 'superdome_paleturquoise', 
+				 icon:  require('../assets/field_icons/superdome/superdome_paleturquoise.png')
+			},
+			{
+				name: 'superdome_yellow', 
+				 icon:  require('../assets/field_icons/superdome/superdome_yellow.png')
+			}
+		]
+	},
+	{
+		variation: [
+			{
+				name: 'truss_darkblue', 
+				 icon:  require('../assets/field_icons/truss/truss_darkblue.png')
+			},
+			{
+				name: 'truss_deeppink', 
+				 icon:  require('../assets/field_icons/truss/truss_deeppink.png')
+			},
+			{
+				name: 'truss_mediumpurple', 
+				 icon:  require('../assets/field_icons/truss/truss_mediumpurple.png')
+			},
+			{
+				name: 'truss_deepskyblue', 
+				 icon:  require('../assets/field_icons/truss/truss_deepskyblue.png')
+			},
+			{
+				name: 'truss_forestgreen', 
+				 icon:  require('../assets/field_icons/truss/truss_forestgreen.png')
+			},
+			{
+				name: 'truss_frenchblue', 
+				 icon:  require('../assets/field_icons/truss/truss_frenchblue.png')
+			},
+			{
+				name: 'truss_gold', 
+				 icon:  require('../assets/field_icons/truss/truss_gold.png')
+			},
+			{
+				name: 'truss_grey', 
+				 icon:  require('../assets/field_icons/truss/truss_grey.png')
+			},
+			{
+				name: 'truss_paleturquoise', 
+				 icon:  require('../assets/field_icons/truss/truss_paleturquoise.png')
+			},
+			{
+				name: 'truss_yellow', 
+				 icon:  require('../assets/field_icons/truss/truss_yellow.png')
+			}
+		]
+	}
+]
