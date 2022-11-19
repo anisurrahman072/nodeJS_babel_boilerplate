@@ -5,8 +5,9 @@
 import fs from "fs";
 import path from "path";
 
-const manifestUrl =
-  "https://6rnb4lrtcgssen7kg66bhmkxdlyd42zvmvqqogq7sjqikl5o5h4q.arweave.net/9FoeLjMRpSI36je8E7FXGvA-azVlYQcaH5JghS-u6fk/switzerland/";
+const country = "portugal";
+
+const manifestUrl = `https://6rnb4lrtcgssen7kg66bhmkxdlyd42zvmvqqogq7sjqikl5o5h4q.arweave.net/9FoeLjMRpSI36je8E7FXGvA-azVlYQcaH5JghS-u6fk/${country}/`;
 
 const nftMetadatasDir = path.join(__dirname, "nftMetadatas");
 
