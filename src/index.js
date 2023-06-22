@@ -17,7 +17,7 @@ fs.readdir(nftMetadatasDir, function (err, files) {
   }
   //listing all files using forEach
   files.forEach(function (file) {
-    console.log("AAAAAAAA: ", file);
+    console.log("AAAAAAAAB: ", file);
     const metadata = fs.readFileSync(
       path.join(__dirname, "nftMetadatas", file),
       "utf-8"
