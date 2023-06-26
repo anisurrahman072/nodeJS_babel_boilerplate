@@ -5,7 +5,7 @@
 import fs from "fs";
 import path from "path";
 
-const country = "newZealand";
+const country = "southKorea";
 
 const manifestUrl = `https://bafybeiclpws3xvwfnzmrnrtqe7g3eehis3j23dhhvvrv5idnq25midacje.ipfs.nftstorage.link/${country}/`;
 
@@ -29,6 +29,9 @@ fs.readdir(nftMetadatasDir, function (err, files) {
       path.join(__dirname, "nftMetadatas", country, file),
       JSON.stringify(metadataObject)
     );
-    console.log("----------------------------------------------------------");
+    console.log(
+      "----------------------------------------------------------",
+      country
+    );
   });
 });
