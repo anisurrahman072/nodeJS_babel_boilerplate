@@ -18,5 +18,7 @@
     "@babel/preset-env": "^7.7.5",
     "nodemon": "^2.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "agora-token": "^2.0.3"
+  }
 }

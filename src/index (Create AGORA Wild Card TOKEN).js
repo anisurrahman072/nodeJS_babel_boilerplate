@@ -3,7 +3,7 @@ import path from "path";
 import { RtcTokenBuilder, RtcRole } from "agora-token";
 
 const AGORA_APP_ID = "*****";
-// const APP_CERTIFICATE = "*****"; // Secondary Certificate
+// const APP_CERTIFICATE = "******"; // Secondary Certificate
 const APP_CERTIFICATE = "*****"; // Primary Certificate
 const channelName = "Agora*"; // Customize this
 const uid = 0; // Set to 0 for wildcards
