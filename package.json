@@ -19,6 +19,16 @@
     "nodemon": "^2.0.1"
   },
   "dependencies": {
-    "agora-token": "^2.0.3"
+    "@metaplex-foundation/js": "^0.20.1",
+    "@metaplex-foundation/mpl-candy-machine": "^6.0.1",
+    "@metaplex-foundation/mpl-token-metadata": "^3.2.1",
+    "@metaplex-foundation/umi": "^0.9.1",
+    "@metaplex-foundation/umi-bundle-defaults": "^0.9.1",
+    "@solana/spl-token": "^0.4.3",
+    "@solana/web3.js": "^1.91.2",
+    "add": "^2.0.6",
+    "agora-token": "^2.0.3",
+    "bs58": "^5.0.0",
+    "yarn": "^1.22.22"
   }
 }
