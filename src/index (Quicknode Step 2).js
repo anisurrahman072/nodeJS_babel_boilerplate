@@ -23,9 +23,9 @@ try {
   const userWalletSigner = createSignerFromKeypair(umi, userWallet);
 
   const metadata = {
-    name: "WHALE_TEST_1",
-    symbol: "WHALET1",
-    uri: "https://bafkreibvc2f7lvnw2ghldzzqixxkrmfqsukkgnskvg2ioog7qn6ud2weuq.ipfs.nftstorage.link/",
+    name: "BLUE WHALE",
+    symbol: "WHALE",
+    uri: "https://bafkreia37la4l4dsgyhf2dq6pwqwaewqwwpru27oonqq5k5di6bkkz2qde.ipfs.nftstorage.link/",
   };
 
   console.log("SUCCESS 1: ", userWallet, userWalletSigner);
