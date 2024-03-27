@@ -1,10 +1,10 @@
 import { Keypair, LAMPORTS_PER_SOL, Connection } from "@solana/web3.js";
 import * as fs from "fs";
 import bs58 from "bs58";
+require("dotenv").config();
 
 //STEP 1 - Connect to Solana Network
-const endpoint =
-  "https://blue-still-owl.solana-devnet.quiknode.pro/12bb447a3657b7af01be9290cd6005e792db6dce/"; //Replace with your QuickNode RPC Endpoint
+const endpoint = process.env.QUICKNODE_SOLANA_DEVNET_PROVIDER; //Replace with your QuickNode RPC Endpoint
 const solanaConnection = new Connection(endpoint);
 
 //STEP 2 - Generate a New Solana Wallet

@@ -12,11 +12,10 @@ import { createUmi } from "@metaplex-foundation/umi-bundle-defaults";
 import { mplCandyMachine } from "@metaplex-foundation/mpl-candy-machine";
 import "@solana/web3.js";
 import secret from "../guideSecret.json";
+require("dotenv").config();
 
 try {
-  const umi = createUmi(
-    "https://blue-still-owl.solana-devnet.quiknode.pro/12bb447a3657b7af01be9290cd6005e792db6dce/"
-  ); //Replace with your QuickNode RPC Endpoint
+  const umi = createUmi(process.env.QUICKNODE_SOLANA_DEVNET_PROVIDER);
 
   const userWallet = umi.eddsa.createKeypairFromSecretKey(
     new Uint8Array(secret)
