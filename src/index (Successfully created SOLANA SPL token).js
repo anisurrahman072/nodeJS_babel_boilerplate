@@ -12,7 +12,7 @@ async function createToken() {
     );
 
     // Your wallet private key
-    const privateKey = process.env.SOLANA_WHALE_OWNER_PRIVATE_KEY;
+    const privateKey = process.env.ANIS_MAIN_ACCOUNT_PRIVATE_KEY;
     // Your wallet's keypair
     const walletKeypair = Keypair.fromSecretKey(
       new Uint8Array(bs58.decode(privateKey))
