@@ -1,102 +1,77 @@
-import {
-  getOrCreateAssociatedTokenAccount,
-  createTransferInstruction,
-} from "@solana/spl-token";
-import {
-  Connection,
-  Keypair,
-  ParsedAccountData,
-  PublicKey,
-  sendAndConfirmTransaction,
-  Transaction,
-} from "@solana/web3.js";
-require("dotenv").config();
+import RaydiumSwap from "./raydiumSwap/RaydiumSwap";
+import { Transaction, VersionedTransaction } from "@solana/web3.js";
+import "dotenv/config";
+import { swapConfig } from "./raydiumSwap/swapConfig"; // Import the configuration
 
-// Start Operation
-const secret =
-  process.env.BLUE_WHALE_ACCOUNT_SECRET_ARRAY.split(",").map(Number); // 👈 Replace with your secret
-
-const FROM_KEYPAIR = Keypair.fromSecretKey(new Uint8Array(secret));
-
-console.log(
-  `BLUE WHALE Account public key found: ${FROM_KEYPAIR.publicKey.toString()}.`
-);
-
-const QUICKNODE_RPC = process.env.QUICKNODE_SOLANA_DEVNET_PROVIDER;
-const SOLANA_CONNECTION = new Connection(QUICKNODE_RPC);
-
-const DESTINATION_WALLET = process.env.ANIS_MAIN_ACCOUNT_PUBLIC_KEY;
-const MINT_ADDRESS = process.env.BLUE_WHALE_TOKEN_MINT_ADDRESS; //You must change this value!
-const TRANSFER_AMOUNT = 50;
-
-// Function to fetch decimal of BLUE WHALE TOKEN from BLUE WHALE TOKEN mint address
-async function getNumberDecimals(mintAddress) {
-  const info = await SOLANA_CONNECTION.getParsedAccountInfo(
-    new PublicKey(MINT_ADDRESS)
+/**
+ * Performs a token swap on the Raydium protocol.
+ * Depending on the configuration, it can execute the swap or simulate it.
+ */
+const swap = async () => {
+  /**
+   * The RaydiumSwap instance for handling swaps.
+   */
+  const raydiumSwap = new RaydiumSwap(
+    process.env.RPC_URL,
+    process.env.WALLET_PRIVATE_KEY
   );
-  const result = (info.value?.data).parsed.info.decimals;
-  return result;
-}
-
-// Function to transfer BLUE WHALE token
-// Function to transfer BLUE WHALE token
-// Function to transfer BLUE WHALE token
-async function sendTokens() {
+  console.log(`✅ Raydium swap initialized`);
   console.log(
-    `
-🚀 Sending ${TRANSFER_AMOUNT} WHALE TOKEN from ${FROM_KEYPAIR.publicKey.toString()} to ${DESTINATION_WALLET}.`
-  );
-  //Step 1
-  console.log(`1 - Getting Source Token Account`);
-  let sourceAccount = await getOrCreateAssociatedTokenAccount(
-    SOLANA_CONNECTION,
-    FROM_KEYPAIR,
-    new PublicKey(MINT_ADDRESS),
-    FROM_KEYPAIR.publicKey
-  );
-  console.log(`    Source Account: ${sourceAccount.address.toString()}`);
-
-  //Step 2
-  console.log(`2 - Getting Destination Token Account`);
-  let destinationAccount = await getOrCreateAssociatedTokenAccount(
-    SOLANA_CONNECTION,
-    FROM_KEYPAIR,
-    new PublicKey(MINT_ADDRESS),
-    new PublicKey(DESTINATION_WALLET)
-  );
-  console.log(
-    `    Destination Account: ${destinationAccount.address.toString()}`
+    `✅ Swapping ${swapConfig.tokenAAmount} of ${swapConfig.tokenAAddress} for ${swapConfig.tokenBAddress}...`
   );
 
-  //Step 3
-  console.log(`3 - Fetching Number of Decimals for Mint: ${MINT_ADDRESS}`);
-  const numberDecimals = await getNumberDecimals(MINT_ADDRESS);
-  console.log(`    Number of Decimals: ${numberDecimals}`);
+  /**
+   * Load pool keys from the Raydium API to enable finding pool information.
+   */
+  await raydiumSwap.loadPoolKeys(swapConfig.liquidityFile);
+  console.log(`✅ Loaded pool keys`);
 
-  //Step 4
-  console.log(`4 - Creating and Sending Transaction`);
-  const tx = new Transaction();
-  tx.add(
-    createTransferInstruction(
-      sourceAccount.address,
-      destinationAccount.address,
-      FROM_KEYPAIR.publicKey,
-      TRANSFER_AMOUNT * Math.pow(10, numberDecimals)
-    )
+  /**
+   * Find pool information for the given token pair.
+   */
+  const poolInfo = raydiumSwap.findPoolInfoForTokens(
+    swapConfig.tokenAAddress,
+    swapConfig.tokenBAddress
   );
+  console.log("✅ Found pool info");
 
-  const latestBlockHash = await SOLANA_CONNECTION.getLatestBlockhash(
-    "confirmed"
+  /**
+   * Prepare the swap transaction with the given parameters.
+   */
+  const tx = await raydiumSwap.getSwapTransaction(
+    swapConfig.tokenBAddress,
+    swapConfig.tokenAAmount,
+    poolInfo,
+    swapConfig.maxLamports,
+    swapConfig.useVersionedTransaction,
+    swapConfig.direction
   );
-  tx.recentBlockhash = await latestBlockHash.blockhash;
-  const signature = await sendAndConfirmTransaction(SOLANA_CONNECTION, tx, [
-    FROM_KEYPAIR,
-  ]);
-  console.log(
-    "\x1b[32m", //Green Text
-    `   Transaction Success!🎉`,
-    `\n    https://explorer.solana.com/tx/${signature}?cluster=devnet`
-  );
-}
+  console.log("✅ Built Transaction : ", tx);
 
-sendTokens();
+  /**
+   * Depending on the configuration, execute or simulate the swap.
+   */
+  if (swapConfig.executeSwap) {
+    /**
+     * Send the transaction to the network and log the transaction ID.
+     */
+    const txid = swapConfig.useVersionedTransaction
+      ? await raydiumSwap.sendVersionedTransaction(tx, swapConfig.maxRetries)
+      : await raydiumSwap.sendLegacyTransaction(tx, swapConfig.maxRetries);
+
+    console.log(
+      `✅ SWAP Completed. Transaction ID: https://solscan.io/tx/${txid}`
+    );
+  } else {
+    /**
+     * Simulate the transaction and log the result.
+     */
+    const simRes = swapConfig.useVersionedTransaction
+      ? await raydiumSwap.simulateVersionedTransaction(tx)
+      : await raydiumSwap.simulateLegacyTransaction(tx);
+
+    console.log("✅ SWAP Simulated. Response: ", simRes);
+  }
+};
+
+swap();
