@@ -1,7 +1,11 @@
-import RaydiumSwap from "./raydiumSwap/RaydiumSwap";
+// This file is the main file to start Raydium SWAP.
+// To run this file, just move this inde.js file directly under /src directory
+// Then just run yarn start
+
+import RaydiumSwap from "./RaydiumSwap";
 import { Transaction, VersionedTransaction } from "@solana/web3.js";
 import "dotenv/config";
-import { swapConfig } from "./raydiumSwap/swapConfig"; // Import the configuration
+import { swapConfig } from "./swapConfig"; // Import the configuration
 
 /**
  * Performs a token swap on the Raydium protocol.
